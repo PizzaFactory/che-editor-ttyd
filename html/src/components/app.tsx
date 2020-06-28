@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 
 import { ITerminalOptions, ITheme } from 'xterm';
 import { Xterm } from './terminal';
+import { Navbar } from './navbar';
 
 if ((module as any).hot) {
     // tslint:disable-next-line:no-var-requires
@@ -40,6 +41,9 @@ const termOptions = {
 
 export class App extends Component {
     render() {
-        return <Xterm id="terminal-container" wsUrl={wsUrl} tokenUrl={tokenUrl} options={termOptions} />;
+        return (<div style={{ display: 'flex' }}>
+                  <Navbar/>
+                  <Xterm id="terminal-container" wsUrl={wsUrl} tokenUrl={tokenUrl} options={termOptions} />
+                </div>);
     }
 }

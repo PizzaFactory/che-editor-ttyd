@@ -4,10 +4,11 @@ body {
   min-height: 100%;
   margin: 0;
   overflow: hidden;
+  display: flex;
 }
 
 #terminal-container {
-  width: auto;
+  width: 99.5vw;
   height: 100%;
   margin: 0 auto;
   padding: 0;
